@@ -1,0 +1,9 @@
+[Bb]in/
+[Oo]bj/
+Build/
+.vs/
+*.lock.json
+*.nuget.props
+*.nuget.targets
+*.orig
+.DS_Store
