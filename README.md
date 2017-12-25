@@ -54,11 +54,9 @@
 
 ### 安装
 
-qcloudsms_csharp可以采用多种方式进行安装，我们提供以下三种方法供用户使用：
-
 #### nuget
 
-要使用qcloudsms_csharp功能，需要在.nuspec中添加如下依赖：
+要使用qcloudsms_csharp功能，只需要在.nuspec文件中添加如下依赖：
 
 ```xml
 <dependencies>
@@ -66,9 +64,7 @@ qcloudsms_csharp可以采用多种方式进行安装，我们提供以下三种�
 </dependencies>
 ```
 
-#### 手动
-
-todo
+或者参考nuget官方网站进行安装: https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package
 
 ### 用法
 
@@ -354,13 +350,136 @@ catch (Exception e)
 多个线程可以共用一个连接池发送API请求，多线程并发单发短信示例如下：
 
 ```csharp
+using qcloudsms_csharp;
+using qcloudsms_csharp.httpclient;
+using qcloudsms_csharp.json;
+
+using System;
+using System.Threading;
+
+
+public class SmsTest
+{
+    public class SmsArg
+    {
+        public SmsSingleSender sender;
+        public string nationCode;
+        public string phoneNumber;
+        public string msg;
+
+        public SmsArg(SmsSingleSender sender, string nationCode, string phoneNumber, string msg)
+        {
+            this.sender = sender;
+            this.nationCode = nationCode;
+            this.phoneNumber = phoneNumber;
+            this.msg = msg;
+        }
+    }
+
+    public static void SendSms(object data)
+    {
+        SmsArg arg = (SmsArg)data;
+        try
+        {
+            var result = arg.sender.send(0, arg.nationCode, arg.phoneNumber, arg.msg, "", "");
+            Console.WriteLine("{0}, {1}", result, arg.phoneNumber);
+        }
+        catch (JSONException e)
+        {
+            Console.WriteLine(e);
+        }
+        catch (HTTPException e)
+        {
+            Console.WriteLine(e);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        int appid = 122333333;
+        string appkey = "9ff91d87c2cd7cd0ea762f141975d1df37481d48700d70ac37470aefc60f9bad";
+        string[] phoneNumbers = {
+                "21212313123", "12345678902", "12345678903",
+                "21212313124", "12345678903", "12345678904",
+                "21212313125", "12345678904", "12345678905",
+                "21212313126", "12345678905", "12345678906",
+                "21212313127", "12345678906", "12345678907",
+            };
+
+        // 创建一个连接池httpclient
+        PoolingHTTPClient httpclient = new PoolingHTTPClient();
+
+        // 创建SmsSingleSender时传入连接池http client
+        SmsSingleSender ssender = new SmsSingleSender(appid, appkey, httpclient);
+
+        // 创建线程
+        Thread[] threads = new Thread[phoneNumbers.Length];
+        for (int i = 0; i < phoneNumbers.Length; i++)
+        {
+            threads[i] = new Thread(SmsTest.SendSms);
+        }
+
+        // 运行线程
+        for (int i = 0; i < threads.Length; i++)
+        {
+            threads[i].Start(new SmsArg(ssender, "86", phoneNumbers[i], "您验证码是：5678"));
+        }
+
+        // join线程
+        for (int i = 0; i < threads.Length; i++)
+        {
+            threads[i].Join();
+        }
+
+        // 关闭连接池httpclient
+        httpclient.close();
+    }
+}
 ```
 
 ### 使用自定义HTTP client实现
 
-如果需要使用自定义的HTTP client实现，只需实现`com.github.qcloudsms.httpclient.HTTPClient`接口，并在构造API对象时传入自定义HTTP client即可，一个参考示例如下：
+如果需要使用自定义的HTTP client实现，只需实现`qcloudsms_csharp.httpclient.IHTTPClient`接口，并在构造API对象时传入自定义HTTP client即可，一个参考示例如下：
 
 ```csharp
+using qcloudsms_csharp;
+using qcloudsms_csharp.httpclient;
+
+// using myhttp_namespace;
+
+public class CustomHTTPClient : IHTTPClient
+{
+    public HTTPResponse fetch(HTTPRequest request)
+    {
+        // 1. 创建自定义HTTP request
+        // MyHTTPrequest req = MyHTTPRequest.build(request)
+
+        // 2. 创建自定义HTTP cleint
+        // MyHTTPClient client = new MyHTTPClient();
+
+        // 3. 使用自定义HTTP client获取HTTP响应
+        // MyHTTPResponse response = client.fetch(req);
+
+        // 4. 转换HTTP响应到HTTPResponse
+        // HTTPResponse res = transformToHTTPResponse(response);
+
+        // 5. 返回HTTPResponse实例
+        // return res;
+    }
+
+    public void close()
+    {
+    }
+}
+
+// 创建自定义HTTP client
+CustomHTTPClient httpclient = new CustomHTTPClient();
+// 构造API对象时传入自定义HTTP client
+SmsSingleSender ssender = new SmsSingleSender(appid, appkey, httpclient);
 ```
 
 > `Note` 注意上面的这个示例代码只作参考，无法直接编译和运行，需要作相应修改。
