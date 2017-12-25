@@ -18,19 +18,15 @@ namespace qcloudsms_csharp
             : base(appid, appkey, httpclient)
         { }
 
-        /**
-         * 发送语音短信
-         *
-         * @param nationCode 国家码，如 86 为中国
-         * @param phoneNumber 不带国家码的手机号
-         * @param msg 消息类型
-         * @param playtimes 播放次数
-         * @param ext 服务端原样返回的参数，可填空
-         * @return {@link}SmsVoiceVerifyCodeSenderResult
-         * @throws HTTPException  http status exception
-         * @throws JSONException  json parse exception
-         * @throws HttpRequestException    network problem
-         */
+        /// <summary>
+        /// Send a voice verify code message.
+        /// </summary>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="phoneNumber">phone number</param>
+        /// <param name="msg">voice verify code message</param>
+        /// <param name="playtimes">playtimes, optional, max is 3, default is 2</param>
+        /// <param name="ext">ext field, content will be returned by server as it is</param>
+        /// <returns></returns>
         public SmsVoiceVerifyCodeSenderResult send(String nationCode, String phoneNumber, String msg,
             int playtimes, String ext)
         {

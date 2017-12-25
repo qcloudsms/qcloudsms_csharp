@@ -99,7 +99,7 @@ try
 {
     SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
     var result = ssender.send(0, "86", phoneNumbers[0],
-        "您的验证码是: 12345", null, null);
+        "您的验证码是: 12345", "", "");
     Console.WriteLine(result);
 }
 catch (JSONException e)
@@ -133,7 +133,7 @@ try
 {
     SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
     var result = ssender.sendWithParam("86", phoneNumbers[0],
-        templateId, new[] { "12345" }, null, null, null);
+        templateId, new[] { "12345" }, "", "", "");
     Console.WriteLine(result);
 }
 catch (JSONException e)
@@ -165,7 +165,7 @@ try
 {
     SmsMultiSender msender = new SmsMultiSender(appid, appkey);
     var result = msender.send(0, "86", phoneNumbers,
-        "您的验证码是: 67890", null, "");
+        "您的验证码是: 67890", "", "");
     Console.WriteLine(result);
 }
 catch (JSONException e)
@@ -197,7 +197,7 @@ try
 {
     SmsMultiSender msender = new SmsMultiSender(appid, appkey);
     var sresult = msender.sendWithParam("86", phoneNumbers, templateId,
-        new[]{"67890"}, null, null, null);
+        new[]{"67890"}, "", "", "");
     Console.WriteLine(sresult);
 catch (JSONException e)
 {
@@ -259,7 +259,7 @@ using System;
 try
 {
     SmsVoicePromptSender vspsender = new SmsVoicePromptSender(appid, appkey);
-    var result = vspsender.send("86", phoneNumbers[0], 2, 2, "您的验证码是: 54321", null);
+    var result = vspsender.send("86", phoneNumbers[0], 2, "您的验证码是: 54321", 2, "");
     Console.WriteLine(result);
 }
 catch (JSONException e)

@@ -20,19 +20,16 @@ namespace qcloudsms_csharp
         : base(appid, appkey, httpclient)
         { }
 
-        /**
-         * 普通群发
-         *
-         * 明确指定内容，如果有多个签名，请在内容中以【】的方式添加到信息内容中，否则系统将使用默认签名
-         *
-         * @param type 短信类型，0 为普通短信，1 营销短信
-         * @param nationCode 国家码，如 86 为中国
-         * @param phoneNumbers 不带国家码的手机号列表
-         * @param msg 信息内容，必须与申请的模板格式一致，否则将返回错误
-         * @param extend 扩展码，可填空
-         * @param ext 服务端原样返回的参数，可填空
-         * @return {@link}SmsMultiSenderResult
-         */
+        /// <summary>
+        /// Send a SMS messages to multiple phones at once.
+        /// </summary>
+        /// <param name="type">Send a SMS messages to multiple phones at once.</param>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="phoneNumbers">phone number array</param>
+        /// <param name="msg">SMS message content</param>
+        /// <param name="extend">extend field, default is empty string</param>
+        /// <param name="ext">ext field, content will be returned by server as it is</param>
+        /// <returns>SmsMultiSenderResult</returns>
         public SmsMultiSenderResult send(int type, string nationCode, List<string> phoneNumbers,
             string msg, string extend, string ext)
         {
@@ -69,6 +66,16 @@ namespace qcloudsms_csharp
             return result;
         }
 
+        /// <summary>
+        /// Send a SMS messages to multiple phones at once.
+        /// </summary>
+        /// <param name="type">Send a SMS messages to multiple phones at once.</param>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="phoneNumbers">phone number array</param>
+        /// <param name="msg">SMS message content</param>
+        /// <param name="extend">extend field, default is empty string</param>
+        /// <param name="ext">ext field, content will be returned by server as it is</param>
+        /// <returns>SmsMultiSenderResult</returns>
         public SmsMultiSenderResult send(int type, string nationCode, string[] phoneNumbers,
             string msg, string extend, string ext)
         {
@@ -76,18 +83,16 @@ namespace qcloudsms_csharp
                         msg, extend, ext);
         }
 
-        /**
-         * 指定模板群发
-         *
-         * @param nationCode 国家码，如 86 为中国
-         * @param phoneNumbers 不带国家码的手机号列表
-         * @param templateId 模板 id
-         * @param params 模板参数列表
-         * @param sign 签名，如果填空，系统会使用默认签名
-         * @param extend 扩展码，可以填空
-         * @param ext 服务端原样返回的参数，可以填空
-         * @return {@link}SmsMultiSenderResult
-         */
+        /// <summary>
+        /// Send a SMS messages with template parameters to multiple phones at once.
+        /// </summary>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="phoneNumbers">multiple phone numbers</param>
+        /// <param name="templateId">template id</param>
+        /// <param name="parameters">template parameters</param>
+        /// <param name="sign">Sms user sign</param>
+        /// <param name="ext">extend field, default is empty string</param>
+        /// <returns>SmsMultiSenderResult</returns>
         public SmsMultiSenderResult sendWithParam(string nationCode, List<string> phoneNumbers,
             int templateId, List<string> parameters, string sign, string extend, string ext)
         {
@@ -124,6 +129,16 @@ namespace qcloudsms_csharp
             return result;
         }
 
+        /// <summary>
+        /// Send a SMS messages with template parameters to multiple phones at once.
+        /// </summary>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="phoneNumbers">multiple phone numbers</param>
+        /// <param name="templateId">template id</param>
+        /// <param name="parameters">template parameters</param>
+        /// <param name="sign">Sms user sign</param>
+        /// <param name="ext">extend field, default is empty string</param>
+        /// <returns>SmsMultiSenderResult</returns>
         public SmsMultiSenderResult sendWithParam(string nationCode, string[] phoneNumbers,
             int templateId, string[] parameters, string sign, string extend, string ext)
         {

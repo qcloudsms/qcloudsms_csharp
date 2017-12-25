@@ -16,22 +16,18 @@ namespace qcloudsms_csharp
         public SmsVoicePromptSender(int appid, string appkey, IHTTPClient httpclient) : base(appid, appkey, httpclient)
         { }
 
-        /**
-         * 发送语音短信
-         *
-         * @param nationCode 国家码，如 86 为中国
-         * @param phoneNumber 不带国家码的手机号
-         * @param prompttype 类型，目前固定值为2
-         * @param playtimes 播放次数
-         * @param msg 语音通知消息内容
-         * @param ext  "扩展字段，原样返回"
-         * @return {@link}SmsVoicePromptSenderResult
-         * @throws HTTPException  http status exception
-         * @throws JSONException  json parse exception
-         * @throws HttpRequestException    network problem
-         */
+        /// <summary>
+        /// Send a voice prompt message.
+        /// </summary>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="phoneNumber">phone number</param>
+        /// <param name="prompttype">voice prompt type, currently value is 2</param>
+        /// <param name="msg">voice prompt message</param>
+        /// <param name="playtimes">playtimes, optional, max is 3, default is 2</param>
+        /// <param name="ext">ext field, content will be returned by server as it is</param>
+        /// <returns>SmsVoicePromptSenderResult</returns>
         public SmsVoicePromptSenderResult send(string nationCode, string phoneNumber, int prompttype,
-            int playtimes, string msg, string ext)
+            string msg, int playtimes, string ext)
         {
             long random = SmsSenderUtil.getRandom();
             long now = SmsSenderUtil.getCurrentTime();

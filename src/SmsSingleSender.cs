@@ -21,6 +21,16 @@ namespace qcloudsms_csharp
             : base(appid, appkey, httpclient)
         { }
 
+        /// <summary>
+        /// Send single SMS message.
+        /// </summary>
+        /// <param name="type">SMS message type, Enum{0: normal SMS, 1: marketing SMS}</param>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="phoneNumber">phone number</param>
+        /// <param name="msg">SMS message content< /param>
+        /// <param name="extend">extend field, default is empty string</param>
+        /// <param name="ext">ext field, content will be returned by server as it is</param>
+        /// <returns>SmsSingleSenderResult</returns>
         public SmsSingleSenderResult send(int type, string nationCode, string phoneNumber,
             string msg, string extend, string ext)
         {
@@ -56,6 +66,17 @@ namespace qcloudsms_csharp
             return result;
         }
 
+        /// <summary>
+        /// Send single SMS message with template paramters.
+        /// </summary>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="phoneNumber">phone number</param>
+        /// <param name="templateId">template id</param>
+        /// <param name="parameters">template parameters</param>
+        /// <param name="sign">Sms user sign</param>
+        /// <param name="extend">extend field, default is empty string</param>
+        /// <param name="ext">ext field, content will be returned by server as it is</param>
+        /// <returns>SmsSingleSenderResult</returns>
         public SmsSingleSenderResult sendWithParam(string nationCode, string phoneNumber, int templateId,
             string[] parameters, string sign, string extend, string ext)
         {

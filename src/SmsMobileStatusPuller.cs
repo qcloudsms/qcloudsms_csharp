@@ -48,6 +48,15 @@ namespace qcloudsms_csharp
             return res;
         }
 
+        /// <summary>
+        /// Pull SMS messages status for single mobile.
+        /// </summary>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="mobile">mobile number</param>
+        /// <param name="beginTime">begin time, unix timestamp</param>
+        /// <param name="endTime">begin time, unix timestamp</param>
+        /// <param name="max">maximum number of message status</param>
+        /// <returns>SmsStatusPullCallbackResult</returns>
         public SmsStatusPullCallbackResult pullCallback(string nationCode, string mobile,
             long beginTime, long endTime, int max)
         {
@@ -61,6 +70,15 @@ namespace qcloudsms_csharp
             return result;
         }
 
+        /// <summary>
+        /// Pull reply SMS message status for single mobile.
+        /// </summary>
+        /// <param name="nationCode">nation dialing code, e.g. China is 86, USA is 1</param>
+        /// <param name="mobile">mobile number</param>
+        /// <param name="beginTime">begin time, unix timestamp</param>
+        /// <param name="endTime">end time, unix timestamp</param>
+        /// <param name="max">maximum number of message status</param>
+        /// <returns>SmsStatusPullReplyResult</returns>
         public SmsStatusPullReplyResult pullReply(string nationCode, string mobile,
             long beginTime, long endTime, int max)
         {

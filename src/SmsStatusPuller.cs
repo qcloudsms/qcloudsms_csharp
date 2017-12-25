@@ -43,12 +43,11 @@ namespace qcloudsms_csharp
             return res;
         }
 
-        /**
-         * 拉取回执结果
-         *
-         * @param max  最大条数, 最多100
-         * @return {@link}SmsStatusPullCallbackResult
-         */
+        /// <summary>
+        /// Pull callback SMS messages status.
+        /// </summary>
+        /// <param name="max">maximum number of message status</param>
+        /// <returns>SmsStatusPullCallbackResult</returns>
         public SmsStatusPullCallbackResult pullCallback(int max)
         {
             // May throw HttpRequestException
@@ -62,12 +61,11 @@ namespace qcloudsms_csharp
         }
 
 
-        /**
-         * 拉取回复信息
-         *
-         * @param max  最大条数, 最多100
-         * @return {@link}SmsStatusPullReplyResult
-         */
+        /// <summary>
+        /// Pull reply SMS messages status.
+        /// </summary>
+        /// <param name="max">maximum number of message status</param>
+        /// <returns>SmsStatusPullReplyResult</returns>
         public SmsStatusPullReplyResult pullReply(int max)
         {
 

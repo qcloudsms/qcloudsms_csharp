@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>qcloudsms_csharp: qcloudsms_csharp::SmsSingleSender类参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 制作者 Doxygen 1.6.2 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>首页</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>组合类型列表</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>组合类型成员</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>qcloudsms_csharp</b>::<a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender.html">SmsSingleSender</a>
+  </div>
+</div>
+<div class="contents">
+<h1>qcloudsms_csharp::SmsSingleSender类参考</h1><!-- doxytag: class="qcloudsms_csharp::SmsSingleSender" --><!-- doxytag: inherits="qcloudsms_csharp::SmsBase" --><div class="dynheader">
+继承图，类qcloudsms_csharp::SmsSingleSender</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classqcloudsms__csharp_1_1_sms_single_sender.png" usemap="#qcloudsms_csharp::SmsSingleSender_map" alt=""/>
+  <map id="qcloudsms_csharp::SmsSingleSender_map" name="qcloudsms_csharp::SmsSingleSender_map">
+<area href="classqcloudsms__csharp_1_1_sms_base.html" alt="qcloudsms_csharp::SmsBase" shape="rect" coords="0,0,221,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="classqcloudsms__csharp_1_1_sms_single_sender-members.html">所有成员的列表。</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>公有成员</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a325492899c16c8f866d09b695e3efb1d"></a><!-- doxytag: member="qcloudsms_csharp::SmsSingleSender::SmsSingleSender" ref="a325492899c16c8f866d09b695e3efb1d" args="(int appid, string appkey)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>SmsSingleSender</b> (int appid, string appkey)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f59d3ae1b95311d2f1ebcb3e8fd8ead"></a><!-- doxytag: member="qcloudsms_csharp::SmsSingleSender::SmsSingleSender" ref="a2f59d3ae1b95311d2f1ebcb3e8fd8ead" args="(int appid, string appkey, IHTTPClient httpclient)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>SmsSingleSender</b> (int appid, string appkey, <a class="el" href="interfaceqcloudsms__csharp_1_1httpclient_1_1_i_h_t_t_p_client.html">IHTTPClient</a> httpclient)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender_result.html">SmsSingleSenderResult</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender.html#a172419a6328c0c07cb98dbe7e8ff886a">send</a> (int type, string nationCode, string phoneNumber, string msg, string extend, string ext)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Send single SMS message.  <a href="#a172419a6328c0c07cb98dbe7e8ff886a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender_result.html">SmsSingleSenderResult</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender.html#a040425d340105740304cfff4108015bf">sendWithParam</a> (string nationCode, string phoneNumber, int templateId, string[] parameters, string sign, string extend, string ext)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Send single SMS message with template paramters.  <a href="#a040425d340105740304cfff4108015bf"></a><br/></td></tr>
+</table>
+<hr/><h2>成员函数文档</h2>
+<a class="anchor" id="a172419a6328c0c07cb98dbe7e8ff886a"></a><!-- doxytag: member="qcloudsms_csharp::SmsSingleSender::send" ref="a172419a6328c0c07cb98dbe7e8ff886a" args="(int type, string nationCode, string phoneNumber, string msg, string extend, string ext)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender_result.html">SmsSingleSenderResult</a> qcloudsms_csharp::SmsSingleSender::send </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nationCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>phoneNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>extend</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>ext</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Send single SMS message. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>SMS message type, Enum{0: normal SMS, 1: marketing SMS}</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>nationCode</em>&nbsp;</td><td>nation dialing code, e.g. China is 86, USA is 1</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>phoneNumber</em>&nbsp;</td><td>phone number</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>msg</em>&nbsp;</td><td>SMS message content&lt; /param&gt; </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>extend</em>&nbsp;</td><td>extend field, default is empty string</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ext</em>&nbsp;</td><td>ext field, content will be returned by server as it is</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd><a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender_result.html">SmsSingleSenderResult</a></dd></dl>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a040425d340105740304cfff4108015bf"></a><!-- doxytag: member="qcloudsms_csharp::SmsSingleSender::sendWithParam" ref="a040425d340105740304cfff4108015bf" args="(string nationCode, string phoneNumber, int templateId, string[] parameters, string sign, string extend, string ext)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender_result.html">SmsSingleSenderResult</a> qcloudsms_csharp::SmsSingleSender::sendWithParam </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nationCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>phoneNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>templateId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&nbsp;</td>
+          <td class="paramname"> <em>parameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>sign</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>extend</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>ext</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Send single SMS message with template paramters. </p>
+<dl><dt><b>参数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nationCode</em>&nbsp;</td><td>nation dialing code, e.g. China is 86, USA is 1</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>phoneNumber</em>&nbsp;</td><td>phone number</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>templateId</em>&nbsp;</td><td>template id</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>parameters</em>&nbsp;</td><td>template parameters</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sign</em>&nbsp;</td><td>Sms user sign</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>extend</em>&nbsp;</td><td>extend field, default is empty string</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ext</em>&nbsp;</td><td>ext field, content will be returned by server as it is</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>返回:</b></dt><dd><a class="el" href="classqcloudsms__csharp_1_1_sms_single_sender_result.html">SmsSingleSenderResult</a></dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成：<ul>
+<li>src/SmsSingleSender.cs</li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>制作者&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
+</body>
+</html>
