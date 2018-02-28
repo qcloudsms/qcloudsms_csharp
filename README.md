@@ -60,7 +60,7 @@
 
 ```xml
 <dependencies>
-  <dependency id="qcloud.qcloudsms_csharp" version="0.1.1" />
+  <dependency id="qcloud.qcloudsms_csharp" version="0.1.2" />
 </dependencies>
 ```
 

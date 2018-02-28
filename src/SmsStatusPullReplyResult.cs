@@ -14,6 +14,7 @@ namespace qcloudsms_csharp
     {
         public class Reply
         {
+            public string extend = "";
             public string nationcode;
             public string mobile;
             public string text;
@@ -27,6 +28,10 @@ namespace qcloudsms_csharp
 
             public Reply parse(JObject json)
             {
+                if (json["extend"] != null)
+                {
+                    extend = json.GetValue("extend").Value<string>();
+                }
                 try
                 {
                     nationcode = json.GetValue("nationcode").Value<string>();
@@ -63,23 +68,15 @@ namespace qcloudsms_csharp
                 throw new JSONException(String.Format("res: {0}, exception: {1}", response.body, e.Message));
             }
 
-            if (result == 0)
+            if (json["count"] != null)
             {
-                try
+                count = json.GetValue("count").Value<int>();
+            }
+            if (json["data"] != null)
+            {
+                foreach (JObject item in json["data"])
                 {
-                    count = json.GetValue("count").Value<int>();
-                }
-                catch (ArgumentNullException e)
-                {
-                    throw new JSONException(String.Format("res: {0}, exception: {1}", response.body, e.Message));
-                }
-
-                if (json["data"] != null)
-                {
-                    foreach (JObject item in json["data"])
-                    {
-                        replys.Add((new Reply()).parse(item));
-                    }
+                    replys.Add((new Reply()).parse(item));
                 }
             }
         }

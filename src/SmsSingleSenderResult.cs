@@ -39,19 +39,19 @@ namespace qcloudsms_csharp
                 throw new JSONException(String.Format("res: {0}, exception: {1}", response.body, e.Message));
             }
 
-            if (result == 0)
+            if (json["ext"] != null)
             {
-                try
-                {
-                    ext = json.GetValue("ext").Value<String>();
-                    sid = json.GetValue("sid").Value<String>();
-                    fee = json.GetValue("fee").Value<int>();
-                }
-                catch (ArgumentNullException e)
-                {
-                    throw new JSONException(String.Format("res: {0}, exception: {1}", response.body, e.Message));
-                }
+                ext = json.GetValue("ext").Value<String>();
             }
+            if (json["sid"] != null)
+            {
+                sid = json.GetValue("sid").Value<String>();
+            }
+            if (json["fee"] != null)
+            {
+                fee = json.GetValue("fee").Value<int>();
+            }
+
         }
     }
 }

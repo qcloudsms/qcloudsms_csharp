@@ -38,19 +38,21 @@ namespace qcloudsms_csharp
                     throw new JSONException(String.Format("json: {0}, exception: {1}", json, e.Message));
                 }
 
-                if (result == 0)
+                if (json["mobile"] != null)
                 {
-                    try
-                    {
-                        mobile = json.GetValue("mobile").Value<string>();
-                        nationcode = json.GetValue("nationcode").Value<string>();
-                        sid = json.GetValue("sid").Value<string>();
-                        fee = json.GetValue("fee").Value<int>();
-                    }
-                    catch (ArgumentNullException e)
-                    {
-                        throw new JSONException(String.Format("json: {0}, exception: {1}", json, e.Message));
-                    }
+                    mobile = json.GetValue("mobile").Value<string>();
+                }
+                if (json["nationcode"] != null)
+                {
+                    nationcode = json.GetValue("nationcode").Value<string>();
+                }
+                if (json["sid"] != null)
+                {
+                    sid = json.GetValue("sid").Value<string>();
+                }
+                if (json["fee"] != null)
+                {
+                    fee = json.GetValue("fee").Value<int>();
                 }
 
                 return this;
@@ -83,23 +85,15 @@ namespace qcloudsms_csharp
                 throw new JSONException(String.Format("res: {0}, exception: {1}", response.body, e.Message));
             }
 
-            if (result == 0)
+            if (json["ext"] != null)
             {
-                try
+                ext = json.GetValue("ext").Value<string>();
+            }
+            if (json["detail"] != null)
+            {
+                foreach (JObject item in json["detail"])
                 {
-                    ext = json.GetValue("ext").Value<string>();
-                }
-                catch (ArgumentNullException e)
-                {
-                    throw new JSONException(String.Format("res: {0}, exception: {1}", response.body, e.Message));
-                }
-
-                if (json["data"] != null)
-                {
-                    foreach (JObject item in json["data"])
-                    {
-                        details.Add((new Detail()).parse(item));
-                    }
+                    details.Add((new Detail()).parse(item));
                 }
             }
         }

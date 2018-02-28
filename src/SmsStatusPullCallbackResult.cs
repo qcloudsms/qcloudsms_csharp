@@ -74,23 +74,15 @@ namespace qcloudsms_csharp
                 throw new JSONException(String.Format("res: {0}, exception: {1}", response.body, e.Message));
             }
 
-            if (result == 0)
+            if (json["count"] != null)
             {
-                try
+                count = json.GetValue("count").Value<int>();
+            }
+            if (json["data"] != null)
+            {
+                foreach (JObject item in json["data"])
                 {
-                    count = json.GetValue("count").Value<int>();
-                }
-                catch (ArgumentNullException e)
-                {
-                    throw new JSONException(String.Format("res: {0}, exception: {1}", response.body, e.Message));
-                }
-
-                if (json["data"] != null)
-                {
-                    foreach (JObject item in json["data"])
-                    {
-                        callbacks.Add((new Callback()).parse(item));
-                    }
+                    callbacks.Add((new Callback()).parse(item));
                 }
             }
         }
