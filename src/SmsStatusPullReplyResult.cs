@@ -54,6 +54,11 @@ namespace qcloudsms_csharp
         public int count;
         public List<Reply> replys;
 
+        public SmsStatusPullReplyResult()
+        {
+            this.replys = new List<Reply>();
+        }
+
         public override void parseFromHTTPResponse(HTTPResponse response)
         {
             JObject json = parseToJson(response);
