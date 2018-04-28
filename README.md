@@ -60,11 +60,31 @@
 
 ```xml
 <dependencies>
-  <dependency id="qcloud.qcloudsms_csharp" version="0.1.3" />
+  <dependency id="qcloud.qcloudsms_csharp" version="0.1.4" />
 </dependencies>
 ```
 
 或者参考nuget官方网站进行安装: https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package
+
+#### 命名行
+
+- Package Manager
+
+```
+Install-Package qcloud.qcloudsms_csharp -Version 0.1.4
+```
+
+- .NET CLI
+
+```
+dotnet add package qcloud.qcloudsms_csharp --version 0.1.4
+```
+
+- Paket CLI
+
+```
+paket add qcloud.qcloudsms_csharp --version 0.1.4
+```
 
 ### 用法
 
