@@ -6,4 +6,5 @@ Build/
 *.nuget.props
 *.nuget.targets
 *.orig
+.vscode
 .DS_Store
