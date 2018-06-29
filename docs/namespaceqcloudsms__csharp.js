@@ -1,0 +1,25 @@
+var namespaceqcloudsms__csharp =
+[
+    [ "httpclient", "namespaceqcloudsms__csharp_1_1httpclient.html", "namespaceqcloudsms__csharp_1_1httpclient" ],
+    [ "json", "namespaceqcloudsms__csharp_1_1json.html", "namespaceqcloudsms__csharp_1_1json" ],
+    [ "FileVoiceSender", "classqcloudsms__csharp_1_1_file_voice_sender.html", "classqcloudsms__csharp_1_1_file_voice_sender" ],
+    [ "FileVoiceSenderResult", "classqcloudsms__csharp_1_1_file_voice_sender_result.html", "classqcloudsms__csharp_1_1_file_voice_sender_result" ],
+    [ "SmsBase", "classqcloudsms__csharp_1_1_sms_base.html", "classqcloudsms__csharp_1_1_sms_base" ],
+    [ "SmsMobileStatusPuller", "classqcloudsms__csharp_1_1_sms_mobile_status_puller.html", "classqcloudsms__csharp_1_1_sms_mobile_status_puller" ],
+    [ "SmsMultiSender", "classqcloudsms__csharp_1_1_sms_multi_sender.html", "classqcloudsms__csharp_1_1_sms_multi_sender" ],
+    [ "SmsMultiSenderResult", "classqcloudsms__csharp_1_1_sms_multi_sender_result.html", "classqcloudsms__csharp_1_1_sms_multi_sender_result" ],
+    [ "SmsResultBase", "classqcloudsms__csharp_1_1_sms_result_base.html", "classqcloudsms__csharp_1_1_sms_result_base" ],
+    [ "SmsSingleSender", "classqcloudsms__csharp_1_1_sms_single_sender.html", "classqcloudsms__csharp_1_1_sms_single_sender" ],
+    [ "SmsSingleSenderResult", "classqcloudsms__csharp_1_1_sms_single_sender_result.html", "classqcloudsms__csharp_1_1_sms_single_sender_result" ],
+    [ "SmsStatusPullCallbackResult", "classqcloudsms__csharp_1_1_sms_status_pull_callback_result.html", "classqcloudsms__csharp_1_1_sms_status_pull_callback_result" ],
+    [ "SmsStatusPuller", "classqcloudsms__csharp_1_1_sms_status_puller.html", "classqcloudsms__csharp_1_1_sms_status_puller" ],
+    [ "SmsStatusPullReplyResult", "classqcloudsms__csharp_1_1_sms_status_pull_reply_result.html", "classqcloudsms__csharp_1_1_sms_status_pull_reply_result" ],
+    [ "SmsVoicePromptSender", "classqcloudsms__csharp_1_1_sms_voice_prompt_sender.html", "classqcloudsms__csharp_1_1_sms_voice_prompt_sender" ],
+    [ "SmsVoicePromptSenderResult", "classqcloudsms__csharp_1_1_sms_voice_prompt_sender_result.html", "classqcloudsms__csharp_1_1_sms_voice_prompt_sender_result" ],
+    [ "SmsVoiceVerifyCodeSender", "classqcloudsms__csharp_1_1_sms_voice_verify_code_sender.html", "classqcloudsms__csharp_1_1_sms_voice_verify_code_sender" ],
+    [ "SmsVoiceVerifyCodeSenderResult", "classqcloudsms__csharp_1_1_sms_voice_verify_code_sender_result.html", "classqcloudsms__csharp_1_1_sms_voice_verify_code_sender_result" ],
+    [ "TtsVoiceSender", "classqcloudsms__csharp_1_1_tts_voice_sender.html", "classqcloudsms__csharp_1_1_tts_voice_sender" ],
+    [ "TtsVoiceSenderResult", "classqcloudsms__csharp_1_1_tts_voice_sender_result.html", "classqcloudsms__csharp_1_1_tts_voice_sender_result" ],
+    [ "VoiceFileUploader", "classqcloudsms__csharp_1_1_voice_file_uploader.html", "classqcloudsms__csharp_1_1_voice_file_uploader" ],
+    [ "VoiceFileUploaderResult", "classqcloudsms__csharp_1_1_voice_file_uploader_result.html", "classqcloudsms__csharp_1_1_voice_file_uploader_result" ]
+];
