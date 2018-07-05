@@ -67,6 +67,32 @@ namespace qcloudsms_csharp
             return sha256(builder.ToString());
         }
 
+        public static string calculateAuth(String appkey, long random, long time, String fileSha1Sum)
+        {
+            StringBuilder builder = new StringBuilder("appkey=")
+               .Append(appkey)
+               .Append("&random=")
+               .Append(random)
+               .Append("&time=")
+               .Append(time)
+               .Append("&content-sha1=")
+               .Append(fileSha1Sum);
+
+            return sha256(builder.ToString());
+        }
+
+        public static String sha1sum(byte[] bytes)
+        {
+            byte[] hash = SHA1Managed.Create().ComputeHash(bytes);
+
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                builder.Append(hash[i].ToString("X2"));
+            }
+            return builder.ToString().ToLower();
+        }
+
         private static string sha256(string rawString)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(rawString);
@@ -77,8 +103,7 @@ namespace qcloudsms_csharp
             {
                 builder.Append(hash[i].ToString("X2"));
             }
-
-            return builder.ToString();
+            return builder.ToString().ToLower();
         }
     }
 }

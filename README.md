@@ -33,6 +33,9 @@
 
 - 发送语音验证码
 - 发送语音通知
+- 上传语音文件
+- 按语音文件fid发送语音通知
+- 指定模板发送语音通知类
 
 ## 开发
 
@@ -60,7 +63,7 @@
 
 ```xml
 <dependencies>
-  <dependency id="qcloud.qcloudsms_csharp" version="0.1.4" />
+  <dependency id="qcloud.qcloudsms_csharp" version="0.1.5" />
 </dependencies>
 ```
 
@@ -71,24 +74,30 @@
 - Package Manager
 
 ```
-Install-Package qcloud.qcloudsms_csharp -Version 0.1.4
+Install-Package qcloud.qcloudsms_csharp -Version 0.1.5
 ```
 
 - .NET CLI
 
 ```
-dotnet add package qcloud.qcloudsms_csharp --version 0.1.4
+dotnet add package qcloud.qcloudsms_csharp --version 0.1.5
 ```
 
 - Paket CLI
 
 ```
-paket add qcloud.qcloudsms_csharp --version 0.1.4
+paket add qcloud.qcloudsms_csharp --version 0.1.5
 ```
 
-### 用法
+### 文档
 
-若您对接口存在疑问，可以查阅 [开发指南](https://cloud.tencent.com/document/product/382/13297) 、[API文档](https://qcloudsms.github.io/qcloudsms_csharp/) 和 [错误码](https://cloud.tencent.com/document/product/382/3771)。
+若您对接口存在疑问，可以查阅:
+
+* [API开发指南](https://cloud.tencent.com/document/product/382/13297)
+* [SDK文档](https://qcloudsms.github.io/qcloudsms_csharp/)
+* [错误码](https://cloud.tencent.com/document/product/382/3771)
+
+### 示例
 
 - **准备必要参数**
 
@@ -383,6 +392,111 @@ catch (Exception e)
 - **发送国际短信**
 
 国际短信发送可以参考单发短信。
+
+
+- **上传语音文件**
+
+```csharp
+using qcloudsms_csharp;
+using qcloudsms_csharp.json;
+using qcloudsms_csharp.httpclient;
+
+using System;
+using System.IO;
+
+try
+{
+    // Note: 语音文件大小上传限制400K字节
+    String filePath = "/path/to/example.mp3";
+    byte[] content = File.ReadAllBytes(filePath);
+    VoiceFileUploader uploader = new VoiceFileUploader(appid, appkey);
+    VoiceFileUploaderResult result = uploader.upload(content, VoiceFileUploader.ContentType.MP3);
+    // 上传成功后，result里会带有语音文件的fid
+    Console.WriteLine(result);
+}
+catch (JSONException e)
+{
+    Console.WriteLine(e);
+}
+catch (HTTPException e)
+{
+    Console.WriteLine(e);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+}
+```
+
+> `Note` '语音文件上传'功能需要联系腾讯云短信技术支持(QQ:3012203387)才能开通
+
+
+- **按语音文件fid发送语音通知**
+
+```csharp
+using qcloudsms_csharp;
+using qcloudsms_csharp.json;
+using qcloudsms_csharp.httpclient;
+
+using System;
+
+try
+{
+    // Note: 这里fid来自`上传语音文件`接口返回的响应，要按语音
+    //       文件fid发送语音通知，需要先上传语音文件获取fid
+    String fid = "43847b4649ca38f37e596ec2281ce6a56a2a2a13.mp3";
+    FileVoiceSender fvsender = new FileVoiceSender(appid, appkey);
+    FileVoiceSenderResult result = fvsender.send("86",  phoneNumbers[0], fid, 2, "");
+    Console.WriteLine(result);
+}
+catch (JSONException e)
+{
+    Console.WriteLine(e);
+}
+catch (HTTPException e)
+{
+    Console.WriteLine(e);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+}
+```
+
+> `Note` 按'语音文件fid发送语音通知'功能需要联系腾讯云短信技术支持(QQ:3012203387)才能开通
+
+
+- **指定模板发送语音通知**
+
+```csharp
+using qcloudsms_csharp;
+using qcloudsms_csharp.json;
+using qcloudsms_csharp.httpclient;
+
+using System;
+
+try
+{
+    int templateId = 45221;
+    string[] parameters = { "5678" };
+    TtsVoiceSender tvsender = new TtsVoiceSender(appid, appkey);
+    TtsVoiceSenderResult result = tvsender.send("86", phoneNumbers[0],
+        templateId, parameters, 2, "");
+    Console.WriteLine(result);
+}
+catch (JSONException e)
+{
+    Console.WriteLine(e);
+}
+catch (HTTPException e)
+{
+    Console.WriteLine(e);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+}
+```
 
 #### 使用连接池
 

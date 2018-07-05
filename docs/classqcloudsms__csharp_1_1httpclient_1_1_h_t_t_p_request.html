@@ -2,75 +2,192 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>qcloudsms_csharp: qcloudsms_csharp::httpclient::HTTPRequest类参考</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>qcloudsms_csharp: qcloudsms_csharp.httpclient.HTTPRequest类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<!-- 制作者 Doxygen 1.6.2 -->
-<div class="navigation" id="top">
-  <div class="tabs">
-    <ul>
-      <li><a href="main.html"><span>首页</span></a></li>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">qcloudsms_csharp
+   &#160;<span id="projectnumber">0.1.5</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
       <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
     </ul>
   </div>
-  <div class="tabs">
-    <ul>
-      <li><a href="annotated.html"><span>组合类型列表</span></a></li>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
       <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
-      <li><a href="functions.html"><span>组合类型成员</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><b>qcloudsms_csharp</b>::<b>httpclient</b>::<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
   </div>
 </div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>函数</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">qcloudsms_csharp.httpclient.HTTPRequest类 参考</div>  </div>
+</div><!--header-->
 <div class="contents">
-<h1>qcloudsms_csharp::httpclient::HTTPRequest类参考</h1><!-- doxytag: class="qcloudsms_csharp::httpclient::HTTPRequest" -->
-<p><a href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request-members.html">所有成员的列表。</a></p>
-<table border="0" cellpadding="0" cellspacing="0">
-<tr><td colspan="2"><h2>公有成员</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abff09aa6384bb72881e982e3b5bb4615"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::HTTPRequest" ref="abff09aa6384bb72881e982e3b5bb4615" args="(HTTPMethod method, string url)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>HTTPRequest</b> (HTTPMethod method, string url)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae38febd6daddf1d39e0297c1fb883739"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::setBody" ref="ae38febd6daddf1d39e0297c1fb883739" args="(string body)" -->
-<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>setBody</b> (string body)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81865d0eac7c4bf5f94059f5e04565a9"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::addHeader" ref="a81865d0eac7c4bf5f94059f5e04565a9" args="(string name, string value)" -->
-<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>addHeader</b> (string name, string value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3863bd78d2a1139a41d55b45b30f7c3d"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::addQueryParameter" ref="a3863bd78d2a1139a41d55b45b30f7c3d" args="(string name, string value)" -->
-<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>addQueryParameter</b> (string name, string value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae85b47c902f70242eb3ef94ac6870e18"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::addQueryParameter" ref="ae85b47c902f70242eb3ef94ac6870e18" args="(string name, int value)" -->
-<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>addQueryParameter</b> (string name, int value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8470e8d8db124c02cffa32b26d89c325"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::addQueryParameter" ref="a8470e8d8db124c02cffa32b26d89c325" args="(string name, long value)" -->
-<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>addQueryParameter</b> (string name, long value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1df16ed43f1147de3a8d3e36d6d23ccf"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::setConnectionTimeout" ref="a1df16ed43f1147de3a8d3e36d6d23ccf" args="(int connectionTimeout)" -->
-<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>setConnectionTimeout</b> (int connectionTimeout)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe862b703714419438c3e14c54420131"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::setRequestTimeout" ref="abe862b703714419438c3e14c54420131" args="(int requestTimeout)" -->
-<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>setRequestTimeout</b> (int requestTimeout)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add09b7842e97322a158c2cb8a24899f4"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::ToString" ref="add09b7842e97322a158c2cb8a24899f4" args="()" -->
-override string&nbsp;</td><td class="memItemRight" valign="bottom"><b>ToString</b> ()</td></tr>
-<tr><td colspan="2"><h2>公有属性</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6fa64584b00bd6ff007fcdbe2820f19"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::body" ref="ad6fa64584b00bd6ff007fcdbe2820f19" args="" -->
-string&nbsp;</td><td class="memItemRight" valign="bottom"><b>body</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afba0be71928f3bb2bec9438cd6c02143"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::headers" ref="afba0be71928f3bb2bec9438cd6c02143" args="" -->
-Dictionary&lt; string, string &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><b>headers</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a613a1a6f9a9fa2a47d9517393ea27242"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::parameters" ref="a613a1a6f9a9fa2a47d9517393ea27242" args="" -->
-Dictionary&lt; string, string &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><b>parameters</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfcb50dad7ffb6379ead2922db2f67ce"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::connectTimeout" ref="abfcb50dad7ffb6379ead2922db2f67ce" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>connectTimeout</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a981988b3c03b2bd44e43556f6165c391"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::requestTimeout" ref="a981988b3c03b2bd44e43556f6165c391" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>requestTimeout</b></td></tr>
-<tr><td colspan="2"><h2>属性</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfd7612ca151d775cdc54341273431c7"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::method" ref="adfd7612ca151d775cdc54341273431c7" args="" -->
-HTTPMethod&nbsp;</td><td class="memItemRight" valign="bottom"><b>method</b><code> [get, set]</code></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cdab4cbc1f0231b52990d21e2e4dc8d"></a><!-- doxytag: member="qcloudsms_csharp::httpclient::HTTPRequest::url" ref="a4cdab4cbc1f0231b52990d21e2e4dc8d" args="" -->
-string&nbsp;</td><td class="memItemRight" valign="bottom"><b>url</b><code> [get, set]</code></td></tr>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad025a6fe55991c986c64f84166ac1eaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad025a6fe55991c986c64f84166ac1eaf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HTTPRequest</b> (HTTPMethod method, string url)</td></tr>
+<tr class="separator:ad025a6fe55991c986c64f84166ac1eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a637579c57de5ee03240287458a746c65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a637579c57de5ee03240287458a746c65"></a>
+<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setBody</b> (string body)</td></tr>
+<tr class="separator:a637579c57de5ee03240287458a746c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75976030d2c77a9f0876043bcbb47d7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75976030d2c77a9f0876043bcbb47d7d"></a>
+<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setBodyEncoding</b> (Encoding bodyEncoding)</td></tr>
+<tr class="separator:a75976030d2c77a9f0876043bcbb47d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d900a766192884575fd030cae5b9e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85d900a766192884575fd030cae5b9e0"></a>
+<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>addHeader</b> (string name, string value)</td></tr>
+<tr class="separator:a85d900a766192884575fd030cae5b9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca5ac21eb683049de6edf41bd487a8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ca5ac21eb683049de6edf41bd487a8e"></a>
+<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>addQueryParameter</b> (string name, string value)</td></tr>
+<tr class="separator:a9ca5ac21eb683049de6edf41bd487a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b15b7b953df14083c29d670d8ab9ed0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b15b7b953df14083c29d670d8ab9ed0"></a>
+<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>addQueryParameter</b> (string name, int value)</td></tr>
+<tr class="separator:a5b15b7b953df14083c29d670d8ab9ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d826707a1ea93a002bc76a6ca44c74f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d826707a1ea93a002bc76a6ca44c74f"></a>
+<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>addQueryParameter</b> (string name, long value)</td></tr>
+<tr class="separator:a4d826707a1ea93a002bc76a6ca44c74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a864bc7fa11ab58ce4de565d6d221c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17a864bc7fa11ab58ce4de565d6d221c"></a>
+<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setConnectionTimeout</b> (int connectionTimeout)</td></tr>
+<tr class="separator:a17a864bc7fa11ab58ce4de565d6d221c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7937df7f0c628e3aacc4c378ada069f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7937df7f0c628e3aacc4c378ada069f3"></a>
+<a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setRequestTimeout</b> (int requestTimeout)</td></tr>
+<tr class="separator:a7937df7f0c628e3aacc4c378ada069f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adecb5795db625ecca9b77e9f7168c161"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adecb5795db625ecca9b77e9f7168c161"></a>
+override string&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> ()</td></tr>
+<tr class="separator:adecb5795db625ecca9b77e9f7168c161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a20f1b33c1ecb9d8693da5e81fce70c0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20f1b33c1ecb9d8693da5e81fce70c0d"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>body</b></td></tr>
+<tr class="separator:a20f1b33c1ecb9d8693da5e81fce70c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6215d536b91dfef19e3554fdd05e60f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6215d536b91dfef19e3554fdd05e60f2"></a>
+Encoding&#160;</td><td class="memItemRight" valign="bottom"><b>bodyEncoding</b></td></tr>
+<tr class="separator:a6215d536b91dfef19e3554fdd05e60f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf1d0b1f6ee07febd93914272abd80e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbf1d0b1f6ee07febd93914272abd80e"></a>
+Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>headers</b></td></tr>
+<tr class="separator:acbf1d0b1f6ee07febd93914272abd80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9230cd5db7379fcc5c55f45ffa7e9b3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9230cd5db7379fcc5c55f45ffa7e9b3b"></a>
+Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>parameters</b></td></tr>
+<tr class="separator:a9230cd5db7379fcc5c55f45ffa7e9b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b0f825c8ff95ebaed8ba7d44970bbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83b0f825c8ff95ebaed8ba7d44970bbc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>connectTimeout</b></td></tr>
+<tr class="separator:a83b0f825c8ff95ebaed8ba7d44970bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad49baf04b2738a0c7f309a7c23d9668"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad49baf04b2738a0c7f309a7c23d9668"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>requestTimeout</b></td></tr>
+<tr class="separator:aad49baf04b2738a0c7f309a7c23d9668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a2b201c474efa28fbe56c0b017233e564"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b201c474efa28fbe56c0b017233e564"></a>
+HTTPMethod&#160;</td><td class="memItemRight" valign="bottom"><b>method</b><code> [get, set]</code></td></tr>
+<tr class="separator:a2b201c474efa28fbe56c0b017233e564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87718848816b6ca37e8d36141e672368"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87718848816b6ca37e8d36141e672368"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>url</b><code> [get, set]</code></td></tr>
+<tr class="separator:a87718848816b6ca37e8d36141e672368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>该类的文档由以下文件生成：<ul>
+<hr/>该类的文档由以下文件生成:<ul>
 <li>src/httpclient/HTTPRequest.cs</li>
 </ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceqcloudsms__csharp.html">qcloudsms_csharp</a></li><li class="navelem"><a class="el" href="namespaceqcloudsms__csharp_1_1httpclient.html">httpclient</a></li><li class="navelem"><a class="el" href="classqcloudsms__csharp_1_1httpclient_1_1_h_t_t_p_request.html">HTTPRequest</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
 </div>
-<hr size="1"/><address style="text-align: right;"><small>制作者&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.2 </small></address>
 </body>
 </html>

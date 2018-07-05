@@ -1,6 +1,7 @@
 using System;
 using System.Text;
 using System.Net.Http;
+using System.Net.Http.Headers;
 
 
 namespace qcloudsms_csharp.httpclient
@@ -27,10 +28,17 @@ namespace qcloudsms_csharp.httpclient
             msg.RequestUri = uriBuilder.Uri;
             request.url = uriBuilder.Uri.ToString();
             msg.Method = new HttpMethod(request.method.ToString());
-            msg.Content = new StringContent(request.body, Encoding.UTF8);
+            msg.Content = new StringContent(request.body, request.bodyEncoding);
             foreach (var header in request.headers)
             {
-                msg.Headers.Add(header.Key, header.Value);
+                if (header.Key == "Content-Type")
+                {
+                    msg.Content.Headers.ContentType = new MediaTypeHeaderValue(header.Value);
+                }
+                else
+                {
+                    msg.Headers.TryAddWithoutValidation(header.Key, header.Value);
+                }
             }
             // Fetch http response
             try

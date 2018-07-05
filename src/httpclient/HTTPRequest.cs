@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using  System.Text;
 
 namespace qcloudsms_csharp.httpclient
 {
@@ -7,10 +8,13 @@ namespace qcloudsms_csharp.httpclient
         public HTTPMethod method { get; set; }
         public string url { get; set; }
         public string body;
+
+        public Encoding bodyEncoding;
         public Dictionary<string, string> headers;
         public Dictionary<string, string> parameters;
         public int connectTimeout;
         public int requestTimeout;
+
 
         public HTTPRequest(HTTPMethod method, string url)
         {
@@ -18,11 +22,18 @@ namespace qcloudsms_csharp.httpclient
             this.url = url;
             this.headers = new Dictionary<string, string>();
             this.parameters = new Dictionary<string, string>();
+            this.bodyEncoding = System.Text.Encoding.UTF8;
         }
 
         public HTTPRequest setBody(string body)
         {
             this.body = body;
+            return this;
+        }
+
+        public HTTPRequest setBodyEncoding(Encoding bodyEncoding)
+        {
+            this.bodyEncoding = bodyEncoding;
             return this;
         }
 
