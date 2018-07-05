@@ -89,9 +89,15 @@ dotnet add package qcloud.qcloudsms_csharp --version 0.1.5
 paket add qcloud.qcloudsms_csharp --version 0.1.5
 ```
 
-### 用法
+### 文档
 
-若您对接口存在疑问，可以查阅 [开发指南](https://cloud.tencent.com/document/product/382/13297) 、[API文档](https://qcloudsms.github.io/qcloudsms_csharp/) 和 [错误码](https://cloud.tencent.com/document/product/382/3771)。
+若您对接口存在疑问，可以查阅:
+
+* [API开发指南](https://cloud.tencent.com/document/product/382/13297)
+* [SDK文档](https://qcloudsms.github.io/qcloudsms_csharp/)
+* [错误码](https://cloud.tencent.com/document/product/382/3771)
+
+### 示例
 
 - **准备必要参数**
 
