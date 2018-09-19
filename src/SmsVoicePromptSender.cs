@@ -8,7 +8,7 @@ namespace qcloudsms_csharp
 {
     public class SmsVoicePromptSender : SmsBase
     {
-        private string url = "https://yun.tim.qq.com/v5/tlsvoicesvr/sendvoiceprompt";
+        private string url = "https://cloud.tim.qq.com/v5/tlsvoicesvr/sendvoiceprompt";
 
         public SmsVoicePromptSender(int appid, string appkey) : base(appid, appkey, new DefaultHTTPClient())
         { }

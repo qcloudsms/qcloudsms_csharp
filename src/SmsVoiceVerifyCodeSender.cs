@@ -8,7 +8,7 @@ namespace qcloudsms_csharp
 {
     public class SmsVoiceVerifyCodeSender : SmsBase
     {
-        private String url = "https://yun.tim.qq.com/v5/tlsvoicesvr/sendvoice";
+        private String url = "https://cloud.tim.qq.com/v5/tlsvoicesvr/sendvoice";
 
         public SmsVoiceVerifyCodeSender(int appid, String appkey)
             : base(appid, appkey, new DefaultHTTPClient())

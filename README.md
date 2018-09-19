@@ -63,7 +63,7 @@
 
 ```xml
 <dependencies>
-  <dependency id="qcloud.qcloudsms_csharp" version="0.1.5" />
+  <dependency id="qcloud.qcloudsms_csharp" version="0.1.6" />
 </dependencies>
 ```
 
@@ -74,19 +74,19 @@
 - Package Manager
 
 ```
-Install-Package qcloud.qcloudsms_csharp -Version 0.1.5
+Install-Package qcloud.qcloudsms_csharp -Version 0.1.6
 ```
 
 - .NET CLI
 
 ```
-dotnet add package qcloud.qcloudsms_csharp --version 0.1.5
+dotnet add package qcloud.qcloudsms_csharp --version 0.1.6
 ```
 
 - Paket CLI
 
 ```
-paket add qcloud.qcloudsms_csharp --version 0.1.5
+paket add qcloud.qcloudsms_csharp --version 0.1.6
 ```
 
 ### 文档
