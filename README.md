@@ -9,9 +9,7 @@
 
 国内短信支持操作：
 
-- 单发短信
 - 指定模板单发短信
-- 群发短信
 - 指定模板群发短信
 - 拉取短信回执和短信回复状态
 
@@ -19,9 +17,7 @@
 
 海外短信支持操作：
 
-- 单发短信
 - 指定模板单发短信
-- 群发短信
 - 指定模板群发短信
 - 拉取短信回执和短信回复状态
 
@@ -118,40 +114,6 @@ int templateId = 7839; // NOTE: 这里的模板ID`7839`只是一个示例，真�
 string smsSign = "腾讯云"; // NOTE: 这里的签名只是示例，请使用真实的已申请的签名, 签名参数使用的是`签名内容`，而不是`签名ID`
 ```
 
-- **单发短信**
-
-```csharp
-using qcloudsms_csharp;
-using qcloudsms_csharp.json;
-using qcloudsms_csharp.httpclient;
-
-using System;
-
-try
-{
-    SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
-    var result = ssender.send(0, "86", phoneNumbers[0],
-        "【腾讯云】您的验证码是: 5678", "", "");
-    Console.WriteLine(result);
-}
-catch (JSONException e)
-{
-    Console.WriteLine(e);
-}
-catch (HTTPException e)
-{
-    Console.WriteLine(e);
-}
-catch (Exception e)
-{
-    Console.WriteLine(e);
-}
-```
-
-> `Note` 如需发送海外短信，同样可以使用此接口，只需将国家码 `86` 改写成对应国家码号。
-> `Note` 无论单发/群发短信还是指定模板ID单发/群发短信都需要从控制台中申请模板并且模板已经审核通过，才可能下发成功，否则返回失败。
-
-
 - **指定模板ID单发短信**
 
 ```csharp
@@ -165,39 +127,7 @@ try
 {
     SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
     var result = ssender.sendWithParam("86", phoneNumbers[0],
-        templateId, new[]{ "5678" }, smsSign, "", "");  // 签名参数未提供或者为空时，会使用默认签名发送短信
-    Console.WriteLine(result);
-}
-catch (JSONException e)
-{
-    Console.WriteLine(e);
-}
-catch (HTTPException e)
-{
-    Console.WriteLine(e);
-}
-catch (Exception e)
-{
-    Console.WriteLine(e);
-}
-```
-
-> `Note` 无论单发/群发短信还是指定模板ID单发/群发短信都需要从控制台中申请模板并且模板已经审核通过，才可能下发成功，否则返回失败。
-
-- **群发**
-
-```csharp
-using qcloudsms_csharp;
-using qcloudsms_csharp.json;
-using qcloudsms_csharp.httpclient;
-
-using System;
-
-try
-{
-    SmsMultiSender msender = new SmsMultiSender(appid, appkey);
-    var result = msender.send(0, "86", phoneNumbers,
-        "【腾讯云】您的验证码是: 5678", "", "");
+        templateId, new[]{ "5678" }, smsSign, "", "");  // 签名参数不能为空串
     Console.WriteLine(result);
 }
 catch (JSONException e)
@@ -229,7 +159,7 @@ try
 {
     SmsMultiSender msender = new SmsMultiSender(appid, appkey);
     var sresult = msender.sendWithParam("86", phoneNumbers, templateId,
-        new[]{"5678"}, smsSign, "", "");  // 签名参数未提供或者为空时，会使用默认签名发送短信
+        new[]{"5678"}, smsSign, "", "");  // 签名参数不能为空串
     Console.WriteLine(sresult);
 catch (JSONException e)
 {
